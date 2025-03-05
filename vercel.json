@@ -1,0 +1,15 @@
+{
+  "rewrites": [
+    {
+      "source": "/index",
+      "destination": "/index.html"
+    },
+
+{
+  "rewrites": [
+    {
+      "source": "/poetry",
+      "destination": "/poetry/poetry.html"
+    }
+  ]
+}
