@@ -1,10 +1,9 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/poetry/", "destination": "/poetry/poetry.html" },
-    { "source": "/short-stories/", "destination": "/short%20stories/short.html" },
-    { "source": "/blogs/", "destination": "/blogs.html" },
-    { "source": "/about/", "destination": "/about.html" },
-    { "source": "/poetry/poems/poem1/", "destination": "/poetry/poems/poem1.html" }
+  "routes": [
+    { "src": "^/poetry/$", "dest": "/poetry/poetry.html" },
+    { "src": "^/short-stories/$", "dest": "/short stories/short.html" },
+    { "src": "^/blogs/$", "dest": "/blogs.html" },
+    { "src": "^/about/$", "dest": "/about.html" },
+    { "src": "^/poetry/poems/poem1/$", "dest": "/poetry/poems/poem1.html" }
   ]
 }
