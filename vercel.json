@@ -9,3 +9,9 @@
     { "source": "/poetry/poems/poem1/", "destination": "/poetry/poems/poem1.html" }
   ]
 }
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/longed-peace", "destination": "/poetry/poems/poem1.html" }
+  ]
+}
