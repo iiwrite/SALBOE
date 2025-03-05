@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/longedpeace",
-      "destination": "/poetry/poems/poem1"
+      "source": "/longedpeace/",
+      "destination": "/poetry/poems/poem1.html"
     }
   ]
 }
