@@ -1,0 +1,374 @@
+/* General Styles */
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f8f7;
+}
+
+/* Fixed Header */
+.header {
+  position: fixed;
+  top: 0; /* Keep it visible */
+  left: 0;
+  width: 100%;
+  background-color: rgba(65, 9, 9, 0);
+  z-index: 1000;
+  border-bottom:1px solid black;
+  text-align: center;
+  padding: 15px;
+  box-shadow:  black;
+}
+
+
+
+.header h1 {
+  margin: 0;
+  font-size: 4em;
+  line-height: 1;
+  color: #333;
+}
+
+.header p {
+  margin: 5px 0;
+  line-height: 2;
+  color: #777;
+}
+
+.footer {
+  background-color: #f6f8f7; 
+  color: #333;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid black;
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.social-links a {
+  color: #333;
+  text-decoration: none;
+  margin-left: 15px;
+  text-align: right;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: white;
+}
+
+.page-wrapper a:hover{
+  color: pink;
+
+}
+/*Post Slider */
+.post-slider{
+  position: relative;
+}
+
+.post-slider .post-wrapper{
+  width: 80%;
+  height: 350px;
+  margin: 0px auto;
+  overflow: hidden;
+  paddibg: 10px 0px 10px 0px;
+  border: black;
+}
+.post-slider .slider-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  margin: 30px auto;
+  font-size: 2em;
+
+}
+
+.post-slider .post-wrapper .post{
+  width: 300px;
+  height: 350x;
+  margin: 0px 10px;
+  display: inline-block;
+  background:white;
+  border-radius: 5px;
+  box-shadow: 1rem 1rem 1ram -1rem #a0a0a033;
+}
+
+.post-slider .post-wrapper .post .post-info{
+  height: 100px;
+  padding: 0px 5px;
+}
+
+.post-slider .post-wrapper .post .slider-image{
+  width: 100%;
+  height: 250px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+h5{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
+  margin: 5px;
+  text-align: left;
+
+}
+
+.text-date{
+  text-align: left;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 0.75em;
+}
+
+.post-slider .next{
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  font-size: 2em;
+  color: black;
+  cursor: pointer;
+}
+
+.post-slider .prev{
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  font-size: 2em;
+  color: black;
+  cursor: pointer;
+}
+
+
+/* Navigation */
+
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.nav ul li {
+  display: inline;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+}
+
+.nav ul li a.active,
+.nav ul li a:hover {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+/* Main Content */
+main {
+  padding: 40px 20px;
+  margin-top: 140px; /* Increased margin to prevent header overlap */
+  text-align: center;
+}
+
+.short{
+  padding: 40px 20px;
+  margin-top: 140px; /* Increased margin to prevent header overlap */
+  text-align: center;
+
+}
+
+/* Poem Title */
+.poem-title {
+  font-style: italic;
+  font-size: 38px;
+  line-height: 1.5;  /* Improve line spacing for better flow */
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Poem Image */
+.poem-image {
+  width: 60%;
+  max-width: 500px;
+  height: 20;
+  display: block;
+  margin: 20px auto;
+}
+
+.photo-credit {
+  font-size: 0.5rem;
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #555; /* Adjust the color as needed */
+}
+
+
+/* Apply a cursive or elegant serif font for a poetic feel */
+.poem-text p {
+  margin-bottom: 15px;
+  font-style: italic;  /* Makes the text italic */
+  font-family: 'Georgia', 'Times New Roman', serif;  /* Choose a classic serif font for poetry */
+  font-size: 18px;  /* Slightly larger font for readability */
+  line-height: 1.5;  /* Improve line spacing for better flow */
+  color: black;  /* A subtle, poetic color like indigo */
+  text-align: center;  /* Center-align the text for more aesthetic appeal */
+  padding: 20px;  /* Add some padding around each paragraph */
+  white-space: pre-line;
+}
+
+.story{
+
+   margin-bottom: 15px;
+ /* Makes the text italic */
+  font-family: 'Georgia', 'Times New Roman', serif;  /* Choose a classic serif font for poetry */
+  font-size: 18px;  /* Slightly larger font for readability */
+  line-height: 1.5;  /* Improve line spacing for better flow */
+  color: black;  /* A subtle, poetic color like indigo */
+  padding: 20px;  /* Add some padding around each paragraph */
+  max-width: 800px; /* Adjust width as needed */
+  margin: 0 auto; /* Centers the content */
+  text-align: justify; /* Justifies the text */
+
+}
+
+/* Style for the entire poetry collection */
+.poetry-grid {
+  display: grid;                 /* Enable grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Create responsive columns */
+  gap: 40px;                     /* Space between grid items */
+  padding: 40px;                 /* Space around the grid */
+}
+.front-image{
+  width: 100%;
+  max-width: 500px;
+  height: 250px;
+}
+
+/* Style for each individual poetry item */
+.poetry-item {
+  background-color: #f9f8f3;     /* Light background for each item */
+  border-radius: 8px;            /* Rounded corners */
+  overflow: hidden;              /* Ensures the image and text don't overflow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  transition: transform 0.3s ease; /* Smooth transform effect */
+}
+
+.poetry-item:hover {
+  transform: scale(1.05);         /* Slight zoom on hover */
+}
+
+/* Ensure images are responsive and fit within the grid item */
+.poem-image {
+  width: 100%;                   /* Make image fill its container */
+  height: auto;                  /* Maintain aspect ratio */
+  border-bottom: 2px solid #ccc; /* Optional: add a border under the image */
+}
+
+/* Style for the title of each poetry item */
+.poetry-item h3 {
+  text-align: center;            /* Center align the text */
+  padding: 10px;
+  font-size: 1.2em;              /* Adjust font size */
+  color: #333;                   /* Dark text color */
+  font-family: 'Georgia', serif; /* Use a serif font for elegance */
+}
+
+.about-container{
+  font-family: 'Georgia', 'Times New Roman', serif;  /* Choose a classic serif font for poetry */
+  font-size: 18px;  /* Slightly larger font for readability */
+  line-height: 1.5;  /* Improve line spacing for better flow */
+  color: #333;  /* A subtle, poetic color like i */
+  padding: 20px;  /* Add some padding around each paragraph */
+  max-width: 800px; /* Adjust width as needed */
+  margin: 0 auto; /* Centers the content */
+  text-align: justify; /* Justifies the text */
+}
+
+a {
+  text-decoration: none;         /* Remove underline from links */
+  color: inherit;                /* Inherit text color */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    margin-top: 160px;
+  }
+
+  .poem-title {
+    font-size: 28px;
+  }
+
+  .poem-image {
+    width: 90%;
+  }
+
+  .poem-text {
+    font-size: 16px;
+  }
+}
+
+/* Contact Form */
+.contact-form {
+  background-color: #f9f8f3;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form h3 {
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Georgia', serif;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
+
+
+
+
+
