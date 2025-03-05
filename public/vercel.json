@@ -5,16 +5,8 @@
     { "source": "/short-stories/", "destination": "/short stories/short.html" },
     { "source": "/blogs/", "destination": "/blogs.html" },
     { "source": "/about/", "destination": "/about.html" },
- 
 
-  ]
-}
-
-{
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    { "src": "/longedpeace", "dest": "/poetry/poems/poem1.html" }
+    { "source": "/longedpeace/", "destinatiom": "/poetry/poems/poem1.html" }
   ]
 }
 
