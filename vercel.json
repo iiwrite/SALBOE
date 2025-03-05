@@ -12,8 +12,10 @@
 
 {
   "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
-    { "source": "/longedpeace/", "destination": "/poetry/poems/poem1.html" }
+    { "src": "/longedpeace", "dest": "/poetry/poems/poem1.html" }
   ]
 }
+
 
