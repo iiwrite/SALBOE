@@ -1,16 +1,12 @@
-
 {
   "cleanUrls": true,
   "redirects": [
     { "source": "/poetry/", "destination": "/poetry/poetry.html" },
-    { "source": "/short-stories/", "destination": "/short stories/short.html" },
+    { "source": "/short-stories/", "destination": "/short-stories/short.html" },
     { "source": "/blogs/", "destination": "/blogs.html" },
     { "source": "/about/", "destination": "/about.html" },
     { "source": "/poetry/poems/poem1/", "destination": "/poetry/poems/poem1.html" }
-  ]
-}
-{
-  "cleanUrls": true,
+  ],
   "rewrites": [
     { "source": "/longed-peace", "destination": "/poetry/poems/poem1.html" }
   ]
