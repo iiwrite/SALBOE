@@ -8,5 +8,5 @@
   ],
   "rewrites": [
     { "source": "/longed-peace", "destination": "/poetry/poems/poem1.html" }
-  ]
+  ],
 }
