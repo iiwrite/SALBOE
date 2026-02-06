@@ -59,6 +59,7 @@ body {
 /* Copyright */
 .copyright p {
   font-size: 14px;
+  justify-content: flex-end;
   color: #888;
   margin: 0;
 }
@@ -68,6 +69,7 @@ body {
   color: #ccc;
   font-size: 20px;
   margin-left: 15px;
+  justify-content: flex-start;
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -373,6 +375,7 @@ a {
 .contact-form button:hover {
   background-color: #555;
 }
+
 
 
 
