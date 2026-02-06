@@ -45,13 +45,13 @@ body {
   bottom: 0;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: space-between;
   border-top: 1px solid black;
 }
 
 .footer-content {
   display: flex;
-  align-items: center;
+  align-items: space-between;
 }
 
 /* Copyright */
