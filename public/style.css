@@ -12,7 +12,7 @@ body {
   top: 0; /* Keep it visible */
   left: 0;
   width: 100%;
-  background-color: rgba(65, 9, 9, 0);
+  background-color: #cc85f2;
   z-index: 1000;
   border-bottom:1px solid black;
   text-align: center;
@@ -36,7 +36,7 @@ body {
 }
 
 .footer {
-  background-color: #0f0f0f;
+  background-color:#cc85f2;
   padding: 30px 0;
   color: #ccc;
   font-family: Arial, sans-serif;
@@ -372,6 +372,7 @@ a {
 .contact-form button:hover {
   background-color: #555;
 }
+
 
 
 
