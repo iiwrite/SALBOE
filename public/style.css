@@ -45,32 +45,26 @@ body {
   bottom: 0;
   width: 100%;
   display: flex;
-  align-items: space-between;
+  justify-content: space-between;
+  align-items: center;
   border-top: 1px solid black;
 }
 
 .footer-content {
+  width: 100%;
   display: flex;
-  align-items: space-between;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Copyright */
-.copyright p {
-  font-size: 14px;
-  justify-content: flex-end;
-  color: #888;
-  margin: 0;
-}
-
-/* Social icons */
 .social-links a {
-  color: #ccc;
-  font-size: 20px;
-  margin-left: 15px;
-  justify-content: flex-start;
+  color: #333;
   text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
+  margin-left: 15px;
+  text-align: right;
+  transition: color 0.3s ease;
+  
 
 .social-links a:hover {
   color: #ff4d6d;
@@ -373,6 +367,7 @@ a {
 .contact-form button:hover {
   background-color: #555;
 }
+
 
 
 
