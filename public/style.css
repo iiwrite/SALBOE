@@ -36,8 +36,8 @@ body {
 }
 
 .footer {
-  background-color:#cc85f2;
-  padding: 30px 0;
+  background-color: 333;
+  padding: 10px 0;
   color: #ccc;
   font-family: Arial, sans-serif;
 }
@@ -372,6 +372,7 @@ a {
 .contact-form button:hover {
   background-color: #555;
 }
+
 
 
 
