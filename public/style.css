@@ -51,25 +51,31 @@ body {
 }
 
 .footer-content {
-  width: 100%;
   display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
+  justify-content: space-between; /* left ↔ right */
+  align-items: center;
 }
 
+/* Copyright */
+.copyright p {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+}
+
+/* Social icons */
 .social-links a {
-  color: #333;
-  text-decoration: none;
+  color: #ccc;
+  font-size: 20px;
   margin-left: 15px;
-  text-align: right;
-  transition: color 0.3s ease;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links a:hover {
-  color: white;
+  color: #ff4d6d;
+  transform: translateY(-2px);
 }
-
 .page-wrapper a:hover{
   color: pink;
 
@@ -367,6 +373,7 @@ a {
 .contact-form button:hover {
   background-color: #555;
 }
+
 
 
 
