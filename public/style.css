@@ -3,7 +3,7 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin: 0;
   padding: 0;
-  background-color: #f6f8f7;
+  background-color: #F3E5AB;
 }
 
 /* Fixed Header */
@@ -12,7 +12,7 @@ body {
   top: 0; /* Keep it visible */
   left: 0;
   width: 100%;
-  background-color: #cc85f2;
+  background-color:#2e6f40;
   z-index: 1000;
   border-bottom:1px solid black;
   text-align: center;
@@ -372,6 +372,7 @@ a {
 .contact-form button:hover {
   background-color: #555;
 }
+
 
 
 
