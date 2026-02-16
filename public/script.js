@@ -24,8 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("/public/footer.html")
+  fetch("footer.html")
     .then(response => response.text())
     .then(data => {
       // Create a div to hold the footer
