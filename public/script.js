@@ -5,39 +5,25 @@
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".header");
 
-  if (!nav) {
-    console.error("Navigation element not found");
-    return;
-  }
+  if (!nav) return;
 
-  function showNav() {
-    nav.style.transform = "translateY(0)";
-  }
-
-  function hideNav() {
-    nav.style.transform = "translateY(-100%)";
-  }
+  let lastScroll = 0;
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY === 0) {
-      showNav();
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll && currentScroll > 50) {
+      // Scrolling down → hide
+      nav.classList.add("hidden");
     } else {
-      hideNav();
+      // Scrolling up → show
+      nav.classList.remove("hidden");
     }
-  });
 
-  document.addEventListener("dblclick", (event) => {
-    if (!window.getSelection().toString().length) {
-      showNav();
-    }
+    lastScroll = currentScroll;
   });
-
-  // Ensure nav is always fixed
-  nav.style.position = "fixed";
-  nav.style.top = "0";
-  nav.style.width = "100%";
-  nav.style.transition = "transform 0.3s ease-in-out";
 });
+
 
 /*  slick Caraousel*/
 
@@ -83,5 +69,6 @@ responsive: [
 // =======================
 // COMMENTS LOGIC
 // =======================
+
 
 
