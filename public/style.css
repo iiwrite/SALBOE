@@ -3,7 +3,7 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin: 0;
   padding: 0;
-  background-color: #F3E5AB;
+  background-color: #f0ebd5;
 }
 
 /* Fixed Header */
@@ -12,7 +12,7 @@ body {
   top: 0; /* Keep it visible */
   left: 0;
   width: 100%;
-  background-color:#2e6f40;
+  background-color:#fae3bd;
   z-index: 1000;
   border-bottom:1px solid black;
   text-align: center;
@@ -36,10 +36,11 @@ body {
 }
 
 .footer {
-  background-color: 333;
+  background-color: #333;
   padding: 10px 0;
   color: #ccc;
-  font-family: Arial, sans-serif;
+  border-top:1px solid black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .footer-content {
@@ -372,6 +373,7 @@ a {
 .contact-form button:hover {
   background-color: #555;
 }
+
 
 
 
