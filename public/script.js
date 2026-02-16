@@ -25,13 +25,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("/public/index.html")
+  fetch("/public/footer.html")
     .then(response => response.text())
     .then(data => {
-      document.getElementById("footer-placeholder").innerHTML = data;
+      // Create a div to hold the footer
+      const footerWrapper = document.createElement("div");
+      footerWrapper.innerHTML = data;
+
+      // Append it to the end of body
+      document.body.appendChild(footerWrapper);
     })
     .catch(err => console.error("Failed to load footer:", err));
 });
+
 
 
 /*  slick Caraousel*/
@@ -78,6 +84,7 @@ responsive: [
 // =======================
 // COMMENTS LOGIC
 // =======================
+
 
 
 
