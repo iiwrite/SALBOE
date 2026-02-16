@@ -20,7 +20,10 @@ body {
   box-shadow:  black;
   transition: transform 0.4s ease;
 }
-
+/* Hidden state */
+.header.hidden {
+  transform: translateY(-100%);
+}
 
 
 .header h1 {
@@ -374,6 +377,7 @@ a {
 .contact-form button:hover {
   background-color: #555;
 }
+
 
 
 
