@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("footer.html")
+  fetch("/public/index.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("footer-placeholder").innerHTML = data;
@@ -78,6 +78,7 @@ responsive: [
 // =======================
 // COMMENTS LOGIC
 // =======================
+
 
 
 
