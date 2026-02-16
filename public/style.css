@@ -18,6 +18,7 @@ body {
   text-align: center;
   padding: 15px;
   box-shadow:  black;
+  transition: transform 0.4s ease;
 }
 
 
@@ -373,6 +374,7 @@ a {
 .contact-form button:hover {
   background-color: #555;
 }
+
 
 
 
