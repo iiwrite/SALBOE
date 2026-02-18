@@ -422,7 +422,7 @@ a {
     justify-content: center;
     width: 100%;
     padding: 0 16px;
-    padding-left: 10px;
+    gap: 80px;
     margin: 10px auto 0;
   }
 
