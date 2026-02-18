@@ -395,50 +395,128 @@ a {
 /* =========================
    MOBILE RESPONSIVE
 ========================= */
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
+
 @media (max-width: 768px) {
   html, body {
     overflow-x: hidden;
     max-width: 100vw;
   }
 
+  .header {
+    padding: 12px 16px;
+    text-align: center;
+  }
+
   .header h1 {
     font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+    margin: 3px 0 0 0;
   }
 
   .nav ul {
     gap: 12px;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0 10px;
-    margin: 10px 0 0 0;
+    width: 100%;
+    padding: 0 16px;
+    margin: 10px auto 0;
   }
 
   .nav ul li a {
     font-size: 1rem;
   }
 
-  main {
-    margin-top: 200px;
-    padding: 20px 15px;
-  }
-
+  main,
   .short {
-    margin-top: 200px;
+    margin-top: 150px;
+    padding: 20px 16px;
+    box-sizing: border-box;
   }
 
-  .post-slider .prev,
-  .post-slider .next {
+  .page-wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .post-slider .slider-title {
     font-size: 1.5rem;
-    left: 10px;
-    right: 10px;
+    margin: 20px 0;
   }
 
-  .story,
+  .post-slider .post-wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+
+  .post-slider .post-wrapper .post {
+    width: 100% !important;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .post-slider .post-wrapper .post .slider-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .post-slider .prev {
+    left: 5px;
+    font-size: 1.5rem;
+  }
+
+  .post-slider .next {
+    right: 5px;
+    font-size: 1.5rem;
+  }
+
+  .poetry-grid {
+    grid-template-columns: 1fr;
+    padding: 20px 16px;
+  }
+
+  .poetry-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .front-image {
+    max-width: 100%;
+  }
+
+  .poem-title {
+    font-size: 1.6rem;
+  }
+
+  .poem-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .poem-text p,
+  .story {
+    font-size: 1rem;
+    padding: 15px 0;
+  }
+
+  .story {
+    max-width: 100%;
+  }
+
   .about-container {
-    font-size: 16px;
+    font-size: 1rem;
+    padding: 20px 16px;
+    max-width: 100%;
+  }
+
+  h5 {
+    font-size: 1rem;
   }
 }
 
@@ -449,25 +527,19 @@ a {
 
   .nav ul {
     gap: 10px;
-    padding: 0 8px;
-  }
-
-  .nav ul li a {
-    font-size: 0.95rem;
   }
 
   main,
   .short {
-    margin-top: 220px;
+    margin-top: 160px;
+    padding: 16px 16px;
+  }
+
+  .post-slider .post-wrapper .post .slider-image {
+    height: 200px;
+  }
+
+  .poem-title {
+    font-size: 1.4rem;
   }
 }
-
-
-
-
-
-
-
-
-
-
