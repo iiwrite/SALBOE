@@ -431,34 +431,24 @@ a {
 
   main,
   .short {
-    margin-top: 150px;
+    margin-top: 140px;
     padding: 20px 16px;
-    box-sizing: border-box;
   }
 
   .page-wrapper {
     width: 100%;
-    max-width: 100%;
     padding: 0;
     margin: 0;
   }
 
-  .post-slider .slider-title {
-    font-size: 1.5rem;
-    margin: 20px 0;
-  }
-
   .post-slider .post-wrapper {
     width: 100%;
-    max-width: 100%;
     padding: 0 16px;
     margin: 0 auto;
   }
 
   .post-slider .post-wrapper .post {
     width: 100% !important;
-    max-width: 100%;
-    min-width: 0;
   }
 
   .post-slider .post-wrapper .post .slider-image {
@@ -469,12 +459,10 @@ a {
 
   .post-slider .prev {
     left: 5px;
-    font-size: 1.5rem;
   }
 
   .post-slider .next {
     right: 5px;
-    font-size: 1.5rem;
   }
 
   .poetry-grid {
@@ -482,27 +470,13 @@ a {
     padding: 20px 16px;
   }
 
-  .poetry-item h3 {
-    font-size: 1.1rem;
-  }
-
-  .front-image {
-    max-width: 100%;
-  }
-
   .poem-title {
     font-size: 1.6rem;
-  }
-
-  .poem-image {
-    width: 100%;
-    max-width: 100%;
   }
 
   .poem-text p,
   .story {
     font-size: 1rem;
-    padding: 15px 0;
   }
 
   .story {
@@ -514,10 +488,6 @@ a {
     padding: 20px 16px;
     max-width: 100%;
   }
-
-  h5 {
-    font-size: 1rem;
-  }
 }
 
 @media (max-width: 480px) {
@@ -525,21 +495,8 @@ a {
     font-size: 1.6rem;
   }
 
-  .nav ul {
-    gap: 10px;
-  }
-
   main,
   .short {
-    margin-top: 160px;
-    padding: 16px 16px;
-  }
-
-  .post-slider .post-wrapper .post .slider-image {
-    height: 200px;
-  }
-
-  .poem-title {
-    font-size: 1.4rem;
+    margin-top: 150px;
   }
 }
