@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-/*  slick Caraousel
+  slick Caraousel
 
 $('.post-wrapper').slick({
   slidesToShow: 3,
@@ -81,7 +81,7 @@ responsive: [
   // settings: "unslick"
   // instead of a settings object
 ]
-  */
+  /*
  if ($(".post-wrapper").length) {
     $(".post-wrapper").slick({
       slidesToShow: 3,
@@ -103,7 +103,7 @@ responsive: [
     });
   }
 
-});
+});*/
 
 
 
