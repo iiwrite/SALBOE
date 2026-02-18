@@ -430,26 +430,16 @@ a {
     font-size: 1rem;
   }
 
-  main,
+   main,
   .short {
-    margin-top: 140px;
+    margin-top: 150px;
     padding: 20px 16px;
-  }
-
-  .page-wrapper {
-    width: 100%;
-    padding: 0;
-    margin: 0;
   }
 
   .post-slider .post-wrapper {
     width: 100%;
     padding: 0 16px;
     margin: 0 auto;
-  }
-
-  .post-slider .post-wrapper .post {
-    width: 100% !important;
   }
 
   .post-slider .post-wrapper .post .slider-image {
@@ -459,11 +449,13 @@ a {
   }
 
   .post-slider .prev {
-    left: 5px;
+    left: 8px;
+    font-size: 1.5rem;
   }
 
   .post-slider .next {
-    right: 5px;
+    right: 8px;
+    font-size: 1.5rem;
   }
 
   .poetry-grid {
@@ -473,6 +465,10 @@ a {
 
   .poem-title {
     font-size: 1.6rem;
+  }
+
+  .poem-image {
+    width: 90%;
   }
 
   .poem-text p,
@@ -496,8 +492,12 @@ a {
     font-size: 1.6rem;
   }
 
+  .nav ul {
+    gap: 12px;
+  }
+
   main,
   .short {
-    margin-top: 150px;
+    margin-top: 160px;
   }
 }
