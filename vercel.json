@@ -2,14 +2,14 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/short-stories/if-i-was-a-worm",
-      "destination": "/short stories/stories/story1.html"
+      "source": "/shortstories/if-i-was-a-worm",
+      "destination": "/shortstories/stories/story1.html"
     }
   ],
   "redirects": [
     {
-      "source": "/short-stories/",
-      "destination": "/short stories/short.html"
+      "source": "/shortstories/",
+      "destination": "/shortstories/short.html"
     },
     {
       "source": "/poetry/",
