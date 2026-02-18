@@ -5,6 +5,11 @@
       "source": "/shortstories/if-i-was-a-worm",
       "destination": "/shortstories/stories/story1.html"
     }
+    {
+       "source": "/poetry/poetry.html",
+      "destination": "/poetry/,
+    },
+    }
   ],
   "redirects": [
     {
@@ -12,8 +17,9 @@
       "destination": "/shortstories/short.html"
     },
     {
-      "source": "/poetry/",
-      "destination": "/poetry/poetry.html"
+  
+      "source": "/poetry/poetry.html",
+      "destination": "/poetry/",
     },
     {
       "source": "/blogs/",
