@@ -26,15 +26,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+  fetch("/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      // Create a div to hold the footer
+      const footerWrapper = document.createElement("div");
+      footerWrapper.innerHTML = data;
 
-fetch("footer.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("footer-container").innerHTML = data;
-  });
+      // Append it to the end of body
+      document.body.appendChild(footerWrapper);
+    })
+    .catch(err => console.error("Failed to load footer:", err));
+});
 
 
-  slick Caraousel
+
+/*  slick Caraousel*/
 
 $('.post-wrapper').slick({
   slidesToShow: 3,
@@ -74,29 +81,11 @@ responsive: [
   // settings: "unslick"
   // instead of a settings object
 ]
-  /*
- if ($(".post-wrapper").length) {
-    $(".post-wrapper").slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2500,
-      nextArrow: $(".next"),
-      prevArrow: $(".prev"),
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: { slidesToShow: 2 }
-        },
-        {
-          breakpoint: 768,
-          settings: { slidesToShow: 1 }
-        }
-      ]
-    });
-  }
 
-});*/
+// =======================
+// COMMENTS LOGIC
+// =======================
+
 
 
 
