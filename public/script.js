@@ -26,19 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("/footer.html")
-    .then(response => response.text())
-    .then(data => {
-      // Create a div to hold the footer
-      const footerWrapper = document.createElement("div");
-      footerWrapper.innerHTML = data;
 
-      // Append it to the end of body
-      document.body.appendChild(footerWrapper);
-    })
-    .catch(err => console.error("Failed to load footer:", err));
-});
-
+fetch("footer.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("footer-container").innerHTML = data;
+  });
 
 
   slick Caraousel
