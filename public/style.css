@@ -393,26 +393,37 @@ a {
 }
 
 /* ========== Phone-friendly adjustments (original design kept) ========== */
+/* ========== MOBILE-ONLY STYLES (desktop unchanged) ========== */
+
+/* Prevent horizontal scroll on small screens only */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+}
+
+/* Phone layout: 768px and below */
 @media (max-width: 768px) {
   .header {
     padding: 12px 15px;
   }
 
   .header h1 {
-    font-size: 2.2em;
+    font-size: 2em;
   }
 
   .header p {
-    font-size: 0.9em;
-    margin: 3px 0;
+    font-size: 0.85em;
+    margin: 2px 0;
   }
 
   .nav ul {
-    gap: 20px;
-    margin: 8px 0;
+    gap: 18px;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0 10px;
+    padding: 0 5px;
+    margin: 8px 0;
   }
 
   .nav ul li a {
@@ -420,18 +431,78 @@ a {
   }
 
   main,
-  main.short {
+  .short {
     margin-top: 180px;
+    padding: 20px 15px;
+  }
+
+  .post-slider .post-wrapper {
+    width: 95%;
+  }
+
+  .post-slider .post-wrapper .post {
+    width: 280px;
+    max-width: 90vw;
+  }
+
+  .post-slider .prev {
+    left: 10px;
+    font-size: 1.5em;
+  }
+
+  .post-slider .next {
+    right: 10px;
+    font-size: 1.5em;
+  }
+
+  .poetry-grid {
+    grid-template-columns: 1fr;
+    padding: 20px 15px;
+    gap: 25px;
+  }
+
+  .front-image {
+    max-width: 100%;
+  }
+
+  .poem-title {
+    font-size: 1.6em;
+  }
+
+  .poem-image {
+    width: 95%;
+    max-width: 100%;
+  }
+
+  .poem-text p,
+  .story {
+    font-size: 16px;
+    padding: 15px 10px;
+  }
+
+  .story {
+    max-width: 100%;
+  }
+
+  .about-container {
+    padding: 15px 10px;
+    max-width: 100%;
   }
 }
 
+/* Smaller phones: 480px and below */
 @media (max-width: 480px) {
   .header h1 {
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
 
   .nav ul {
-    gap: 15px;
+    gap: 12px;
+  }
+
+  main,
+  .short {
+    margin-top: 200px;
   }
 }
 
