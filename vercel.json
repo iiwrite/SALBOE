@@ -20,11 +20,11 @@
       "destination": "/blogs.html"
     },
     {
-      "source": "/about/",
+      "source": "/aboutme/",
       "destination": "/about.html"
     },
     {
-      "source": "/poetry/poems/poem1/",
+      "source": "/poetry/poems/longedpeace/",
       "destination": "/poetry/poems/poem1.html"
     }
   ]
