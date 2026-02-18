@@ -397,44 +397,52 @@ a {
 ========================= */
 @media (max-width: 768px) {
 
-  /* 1️⃣ Prevent horizontal shift */
-  html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    width: 100%;
+  body {
+    padding-top: 170px;
   }
 
-  /* 2️⃣ Fix header layout */
-  header {
-    width: 100%;
-    left: 0;
-    right: 0;
+  .header h1 {
+    font-size: 2rem;
   }
 
-  /* 3️⃣ Fix content centering */
   main {
-    width: 92%;
-    margin: 0 auto;
-    padding: 20px 0;
+    padding: 20px 15px;
   }
 
-  /* 4️⃣ Fix huge gap under header */
-  /* If header is fixed, use padding-top instead of margin-top */
-  main {
-    padding-top: 140px; /* adjust to your header height */
+  .nav ul {
+    gap: 20px;
   }
 
-  /* 5️⃣ Prevent images pushing layout */
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  .post-slider .prev,
+  .post-slider .next {
+    font-size: 1.5rem;
   }
 
-
-
+  .story,
+  .about-container {
+    font-size: 16px;
+  }
 }
+
+@media (max-width: 480px) {
+
+  body {
+    padding-top: 190px;
+  
+  }
+
+  .header h1 {
+    font-size: 1.6rem;
+  }
+
+  .nav ul {
+    gap: 12px;
+  }
+}
+
+
+
+
 
 
 
