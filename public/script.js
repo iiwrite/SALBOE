@@ -1,59 +1,120 @@
-document.addEventListener("DOMContentLoaded", function () {
+// =======================
+// NAVIGATION LOGIC
+// =======================
 
-  /* =====================
-     HEADER HIDE / SHOW
-  ===================== */
-  const header = document.querySelector(".header");
+document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.querySelector(".header");
+
+  if (!nav) return;
+
   let lastScroll = 0;
 
-  if (header) {
-    window.addEventListener("scroll", function () {
-      const currentScroll = window.pageYOffset;
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
 
-      if (currentScroll > lastScroll && currentScroll > 80) {
-        header.classList.add("hidden");
-      } else {
-        header.classList.remove("hidden");
-      }
+    if (currentScroll > lastScroll && currentScroll > 50) {
+      // Scrolling down → hide
+      nav.classList.add("hidden");
+    } else {
+      // Scrolling up → show
+      nav.classList.remove("hidden");
+    }
 
-      lastScroll = currentScroll;
-    });
-  }
+    lastScroll = currentScroll;
+  });
+});
 
-  /* =====================
-     LOAD FOOTER
-  ===================== */
+
+document.addEventListener("DOMContentLoaded", () => {
   fetch("/footer.html")
     .then(response => response.text())
     .then(data => {
-      const wrapper = document.createElement("div");
-      wrapper.innerHTML = data;
-      document.body.appendChild(wrapper);
-    })
-    .catch(error => console.error("Footer load error:", error));
+      // Create a div to hold the footer
+      const footerWrapper = document.createElement("div");
+      footerWrapper.innerHTML = data;
 
-  /* =====================
-     SLICK SLIDER
-  ===================== */
-  if ($(".post-wrapper").length) {
-    $(".post-wrapper").slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2500,
-      nextArrow: $(".next"),
-      prevArrow: $(".prev"),
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: { slidesToShow: 2 }
-        },
-        {
-          breakpoint: 768,
-          settings: { slidesToShow: 1 }
-        }
-      ]
-    });
-  }
+      // Append it to the end of body
+      document.body.appendChild(footerWrapper);
+    })
+    .catch(err => console.error("Failed to load footer:", err));
+});
+
+
+
+/*  slick Caraousel
+
+$('.post-wrapper').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  nextArrow: $('.next'),
+  prevArrow: $('.prev'),
 
 });
+
+responsive: [
+  {
+    breakpoint: 1024,
+    settings: {
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      infinite: true,
+      dots: true
+    }
+  },
+  {
+    breakpoint: 600,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 2
+    }
+  },
+  {
+    breakpoint: 480,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }
+  // You can unslick at a given breakpoint now by adding:
+  // settings: "unslick"
+  // instead of a settings object
+]
+  */
+ $('.post-wrapper').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  nextArrow: $('.next'),
+  prevArrow: $('.prev'),
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+// =======================
+// COMMENTS LOGIC
+// =======================
+
+
+
+
+
+
