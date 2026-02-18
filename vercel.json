@@ -9,7 +9,7 @@
   "redirects": [
     {
       "source": "/short-stories/",
-      "destination": "/short%20stories/short.html"
+      "destination": "/short stories/short.html"
     },
     {
       "source": "/poetry/",
