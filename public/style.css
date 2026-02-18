@@ -399,6 +399,8 @@ a {
 
   body {
     padding-top: 170px;
+    padding-left: 20px;
+    padding-bottom: 20px;
   }
 
   .header h1 {
@@ -428,6 +430,8 @@ a {
 
   body {
     padding-top: 190px;
+    padding-left: 20px;
+    padding-bottom: 20px;
   }
 
   .header h1 {
