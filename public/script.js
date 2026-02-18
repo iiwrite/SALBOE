@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /*  slick Caraousel*/
 
 $('.post-wrapper').slick({
-  slidesToShow: 3,
+  slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
@@ -52,6 +52,7 @@ $('.post-wrapper').slick({
   prevArrow: $('.prev'),
 
 });
+
 
 responsive: [
   {
