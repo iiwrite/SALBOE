@@ -64,16 +64,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /*  slick Caraousel*/
 
-$('.post-wrapper').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  nextArrow: $('.next'),
-  prevArrow: $('.prev'),
-
+$(document).ready(function() {
+  if ($('.post-wrapper').length) {
+    $('.post-wrapper').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      nextArrow: $('.post-slider .next'),
+      prevArrow: $('.post-slider .prev'),
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  }
 });
-
 
 responsive: [
   {
