@@ -391,7 +391,24 @@ a {
 .contact-form button:hover {
   background-color: #555;
 }
+.hamburger {
+  display: none;
+  /* ... rest of styles */
+}
 
+/* Mobile: show hamburger */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;   /* Visible only here */
+  }
+}
+
+/* Desktop: keep hamburger hidden */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;   /* Always hidden on desktop */
+  }
+}
 /* =========================
    MOBILE RESPONSIVE
 ========================= */

@@ -38,7 +38,28 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(err => console.error("Failed to load footer:", err));
 });
+// Hamburger menu toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector(".nav");
 
+  if (hamburger && nav) {
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      nav.classList.toggle("open");
+      document.body.style.overflow = nav.classList.contains("open") ? "hidden" : "";
+    });
+
+    // Close menu when clicking a link (for same-page anchors or navigation)
+    nav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        nav.classList.remove("open");
+        document.body.style.overflow = "";
+      });
+    });
+  }
+});
 
 
 /*  slick Caraousel*/
