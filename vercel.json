@@ -2,36 +2,44 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/shortstories/if-i-was-a-worm",
+      "source": "/short-stories/if-i-was-a-worm",
       "destination": "/shortstories/stories/story1.html"
-    }
-    {
-       "source": "/poetry/poetry.html",
-      "destination": "/poetry/,
     },
-    }
-  ],
-  "redirects": [
     {
-      "source": "/shortstories/",
+      "source": "/short-stories/if-i-was-a-worm/",
+      "destination": "/shortstories/stories/story1.html"
+    },
+    {
+      "source": "/short-stories",
       "destination": "/shortstories/short.html"
     },
     {
-  
-      "source": "/poetry/poetry.html",
-      "destination": "/poetry/",
+      "source": "/short-stories/",
+      "destination": "/shortstories/short.html"
+    },
+    {
+      "source": "/poetry",
+      "destination": "/poetry/poetry.html"
+    },
+    {
+      "source": "/poetry/",
+      "destination": "/poetry/poetry.html"
+    },
+    {
+      "source": "/blogs",
+      "destination": "/blogs.html"
     },
     {
       "source": "/blogs/",
       "destination": "/blogs.html"
     },
     {
-      "source": "/aboutme/",
+      "source": "/about",
       "destination": "/about.html"
     },
     {
-      "source": "/poetry/poems/longedpeace/",
-      "destination": "/poetry/poems/poem1.html"
+      "source": "/about/",
+      "destination": "/about.html"
     }
   ]
 }
