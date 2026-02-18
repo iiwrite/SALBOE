@@ -1,14 +1,12 @@
 {
   "cleanUrls": true,
-  "redirects": [
+  "rewrites": [
     {
       "source": "/short-stories/if-i-was-a-worm",
-      "destination": "/short%20stories/stories/story1.html"
-    },
-    {
-      "source": "/short-stories/if-i-was-a-worm/",
-      "destination": "/short%20stories/stories/story1.html"
-    },
+      "destination": "/short stories/stories/story1.html"
+    }
+  ],
+  "redirects": [
     {
       "source": "/short-stories/",
       "destination": "/short%20stories/short.html"
