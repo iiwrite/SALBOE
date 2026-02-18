@@ -17,43 +17,111 @@ body {
 
 main {
   flex: 1;
+  margin-top: 180px;
+  padding: 20px;
+}
+
+@media (min-width: 769px) {
+  main {
+    margin-top: 120px;
+  }
+}
 }
 
 /* Fixed Header */
+/* ========== HEADER - Base (mobile-first) ========== */
 .header {
   position: fixed;
-  top: 0; /* Keep it visible */
+  top: 0;
   left: 0;
   width: 100%;
-  background-color:#fae3bd;
+  background-color: #fff;
   z-index: 1000;
-  border-bottom:1px solid black;
-  text-align: center;
-  padding: 15px;
-  box-shadow:  black;
-   transition: transform 0.4s ease;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 15px 20px;
+  transition: transform 0.4s ease;
 }
 
-/* Hidden state */
 .header.hidden {
   transform: translateY(-100%);
 }
 
-
+/* Mobile: stack vertically */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
 
 .header h1 {
   margin: 0;
-  font-size: 4em;
-  line-height: 1;
+  font-size: 1.6em;
   color: #333;
 }
 
 .header p {
-  margin: 5px 0;
-  line-height: 2;
+  margin: 0;
+  font-size: 0.8em;
   color: #777;
 }
 
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+.nav ul li a.active,
+.nav ul li a:hover {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+/* Desktop: logo left, nav right */
+@media (min-width: 769px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 15px 40px;
+    gap: 20px;
+  }
+
+  .header h1 {
+    font-size: 1.8em;
+  }
+
+  .header p {
+    margin: 4px 0 0 0;
+    font-size: 0.75em;
+  }
+
+  /* Group h1 + p on the left */
+  .header h1 {
+    margin-bottom: 0;
+  }
+
+  .nav ul {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    gap: 35px;
+  }
+}
+/*footer*/
 .footer {
   background-color:#fae3bd;
   padding: 10px 0;
@@ -174,8 +242,8 @@ h5{
 }
 
 
-/* Navigation */
-
+/* Navigation 
+<!--
 .nav ul {
   list-style-type: none;
   padding: 0;
@@ -201,6 +269,7 @@ h5{
   border-bottom: 2px solid #000;
 }
 
+
 /* Main Content */
 main {
   padding: 40px 20px;
@@ -213,6 +282,30 @@ main {
   margin-top: 140px; /* Increased margin to prevent header overlap */
   text-align: center;
 
+}
+
+/* Slider - fewer cards on mobile */
+@media (max-width: 768px) {
+  .post-slider .post-wrapper .post {
+    width: 280px;
+  }
+}
+
+/* Poetry/Story grid - 1 column on mobile */
+@media (max-width: 600px) {
+  .poetry-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
+
+/* Readable text on small screens */
+@media (max-width: 768px) {
+  .poem-text p,
+  .story {
+    font-size: 16px;
+    padding: 15px;
+  }
 }
 
 /* Poem Title */
