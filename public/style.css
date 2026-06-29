@@ -118,7 +118,7 @@ main {
   border: black;
 }
 .post-slider .slider-title {
-  font-family: 'EB Garamond', serif;
+  font-family: 'Cinzel', serif;
   text-align: center;
   margin: 30px auto;
   font-size: 2em;
@@ -522,6 +522,7 @@ a {
     font-size: 0.9rem;
     margin: 3px 0 0 0;
   }
+
 
   .nav ul {
     gap: 11px;
