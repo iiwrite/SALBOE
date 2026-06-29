@@ -255,7 +255,7 @@ main {
   line-height: 1.5;  /* Improve line spacing for better flow */
   color: black;  /* A subtle, poetic color like indigo */
   text-align: left;  
-  padding-right: 10000px;
+  padding-right: 100cm;
   padding: 20px;  /* Add some padding around each paragraph */
   white-space: pre-line;
 }
