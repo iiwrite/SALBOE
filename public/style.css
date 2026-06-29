@@ -290,7 +290,10 @@ main {
   padding-top: 0px;
   color: #555; /* Adjust the color as needed */
 }
-
+.poem-page {
+  text-align: Justify; 
+    padding: 20px;
+}
 
 /* Apply a cursive or elegant serif font for a poetic feel */
 .poem-text p {
