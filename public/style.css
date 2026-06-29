@@ -199,8 +199,9 @@ h5{
 }
 
 .nav ul li {
-display: flex;          /* FIXED: Changed from inline to flex for reliable alignment */
+  display: flex;          /* FIXED: Changed from inline to flex for reliable alignment */
   align-items: center;
+  padding: 0 20px;
 }
 
 .nav ul li:not(:last-child) {
@@ -211,7 +212,6 @@ display: flex;          /* FIXED: Changed from inline to flex for reliable align
   text-decoration: none;
   color: #555;
   font-weight: bold;
-  padding: 0 30px;
 }
 
 .nav ul li a.active,
