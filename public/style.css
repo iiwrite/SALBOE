@@ -401,12 +401,6 @@ a {
   gap: 50px;                 /* The gap space between the text column and image column */
 }
 
-.about-image-wrapper {
-  flex: 0.2;                 /* CHANGED: Decreased from 1 to 0.7 so it takes up less width than the text */
-  display: flex;
-  justify-content: center;   
-  align-items: center;
-}
 
 .about-image {
   width: 250px;          /* Limits the size of your portrait image */
