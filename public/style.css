@@ -202,6 +202,8 @@ display: flex;
 
 .nav ul li {
   display: inline;
+   gap: 80px;
+   border-right: 1px solid #000000;
     padding: 0 20px; /* Space between text and the lines */
 }
 
