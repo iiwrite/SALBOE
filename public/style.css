@@ -191,6 +191,8 @@ h5{
 
 .nav ul li {
   display: inline;
+    padding: 0 20px; /* Space between text and the lines */
+    border-right: 1px solid #000; /* The vertical line */
 }
 
 .nav ul li a {
