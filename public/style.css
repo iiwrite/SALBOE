@@ -293,6 +293,7 @@ main {
 .poem-page {
   text-align: Justify; 
     padding: 20px;
+    margin-left: 50px;
 }
 
 /* Apply a cursive or elegant serif font for a poetic feel */
