@@ -400,21 +400,17 @@ a {
   color: #333333;
 }
 .about-page{
-  font-family: 'EB Garamond', serif; /* Choose a classic serif font for poetry */
-  font-size: 18px;  /* Slightly larger font for readability */
-  line-height: 1.5;  /* Improve line spacing for better flow */
-  color: #333;  /* A subtle, poetic color like i */
-  display: flex;
+ display: flex;
   align-items: center;       /* Vertically aligns text and image in the middle */
   justify-content: space-between; /* Creates balanced spacing between text and image */
   gap: 50px;                 /* The gap space between the text column and image column */
-  max-width: 500px;         /* Restricts the layout from getting too wide */
+  max-width: 1000px;         /* Restricts the layout from getting too wide */
   margin: 140px auto 40px auto; /* Centered block + top margin to clear your fixed header */
   padding: 0 20px;
 }
 
 .about-image-wrapper {
-  flex: 0.7;                 /* CHANGED: Decreased from 1 to 0.7 so it takes up less width than the text */
+  flex: 0.2;                 /* CHANGED: Decreased from 1 to 0.7 so it takes up less width than the text */
   display: flex;
   justify-content: center;   
   align-items: center;
