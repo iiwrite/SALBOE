@@ -395,12 +395,6 @@ a {
   margin-bottom: 15px;
   color: #333333;
 }
-.about-page{
-  display: flex;
-  justify-content: space-between; /* Creates balanced spacing between text and image */
-  gap: 50px;                 /* The gap space between the text column and image column */
-}
-
 
 .about-image {
  
