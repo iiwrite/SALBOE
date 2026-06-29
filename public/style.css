@@ -181,10 +181,8 @@ h5{
 
 /* Navigation */
 .nav{
-display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px; 
+  display: flex;
+  justify-content: center;
   background-color: #ffffff;
    width: 100%;
   border-top: 1px solid #000000;
@@ -198,20 +196,22 @@ display: flex;
   margin: 10px 0;
   display: flex;
   justify-content: center;
-  gap: 80px;
 }
 
 .nav ul li {
-  display: inline;
-   gap: 80px;
-   border-right: 1px solid #000000;
-    padding: 0 20px; /* Space between text and the lines */
+display: flex;          /* FIXED: Changed from inline to flex for reliable alignment */
+  align-items: center;
+}
+
+.nav ul li:not(:last-child) {
+  border-right: 1px solid #000000;
 }
 
 .nav ul li a {
   text-decoration: none;
   color: #555;
   font-weight: bold;
+  padding: 0 30px;
 }
 
 .nav ul li a.active,
