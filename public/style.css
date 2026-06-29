@@ -383,6 +383,13 @@ a {
   color: inherit;                /* Inherit text color */
 }
 
+.aboutmeimage {
+  width: 100%;                   /* Make image fill its container */
+  max-width: 500px;
+  height: auto;                  /* Maintain aspect ratio */
+  border-bottom: 2px solid #ccc; /* Optional: add a border under the image */
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
