@@ -309,6 +309,19 @@ main {
   white-space: pre-line;
 }
 
+/* Style for the entire poetry collection */
+.poetry-grid {
+  display: grid;                 /* Enable grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Create responsive columns */
+  gap: 40px;                     /* Space between grid items */
+  padding: 40px;                 /* Space around the grid */
+}
+.front-image{
+  width: 100%;
+  max-width: 500px;
+  height: 250px;
+}
+
 .story{
 
    margin-bottom: 15px;
@@ -323,19 +336,6 @@ main {
   margin: 0 auto; /* Centers the content */
   text-align: Justify; /* Justifies the text */
 
-}
-
-/* Style for the entire poetry collection */
-.poetry-grid {
-  display: grid;                 /* Enable grid layout */
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Create responsive columns */
-  gap: 40px;                     /* Space between grid items */
-  padding: 40px;                 /* Space around the grid */
-}
-.front-image{
-  width: 100%;
-  max-width: 500px;
-  height: 250px;
 }
 
 /* Style for each individual poetry item */
@@ -355,7 +355,7 @@ main {
 .poem-image {
   width: 100%;                   /* Make image fill its container */
   height: auto;                  /* Maintain aspect ratio */
-  border-bottom: 2px solid #ccc; /* Optional: add a border under the image */
+  border-bottom: 2px solid #000000; /* Optional: add a border under the image */
 }
 
 /* Style for the title of each poetry item */
@@ -375,10 +375,9 @@ a {
 
 
 /*about me */
-/* Left Side: Text Column styling */
 .about-text {
   flex: 1;                   /* Allows the text column to expand and fill available space flexibly */
-  text-align: justify;       /* Keeps text crisp and aligned cleanly on both sides */
+  text-align: justify;       
 }
 
 .about-text h2 {
