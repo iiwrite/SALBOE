@@ -291,12 +291,13 @@ main {
   color: #555; /* Adjust the color as needed */
 }
 .poem-page {
-    margin-left: 500px;
+   
 }
 
 /* Apply a cursive or elegant serif font for a poetic feel */
 .poem-text p {
   margin-bottom: 15px;
+   margin-left: 500px;
   font-style: italic;  /* Makes the text italic */
   font-family: 'EB Garamond', serif; /* Choose a classic serif font for poetry */
   font-size: 20px;  /* Slightly larger font for readability */
