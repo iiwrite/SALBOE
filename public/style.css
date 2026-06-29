@@ -385,7 +385,7 @@ a {
 
 .aboutmeimage {
   width: 100%;                   /* Make image fill its container */
-  max-width: 500px;
+  max-width: 250px;
   height: auto;                  /* Maintain aspect ratio */
   border-bottom: 2px solid #ccc; /* Optional: add a border under the image */
 }
