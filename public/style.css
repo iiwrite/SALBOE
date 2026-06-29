@@ -193,7 +193,7 @@ h5{
 }
 
 /* --- LEFT SIDE: Navigation Links Group --- */
-.nav-links {
+.nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -201,14 +201,14 @@ h5{
   align-items: stretch;
 }
 
-.nav-links li {
+.nav ul li {
   display: flex;          
   align-items: center;
   padding: 0;               
   border-right: 1px solid #000000; /* Adds divider line to every link */
 }
 
-.nav-links li a {
+.nav ul li a {
   text-decoration: none;
   color: #555;
   font-weight: bold;
@@ -216,8 +216,8 @@ h5{
   display: block;
 }
 
-.nav-links li a.active,
-.nav-links li a:hover {
+.nav ul li a.active,
+.nav ul li a:hover {
   color: #000;
   text-decoration: underline;
   text-underline-offset: 4px;
