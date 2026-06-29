@@ -182,8 +182,10 @@ h5{
 
 /* Navigation Container Box */
 .nav {
+position: relative;             /* CRITICAL: Allows absolute positioning inside it */
   display: flex;
-          /* Ensures lines stretch fully from top to bottom */
+  justify-content: center;        /* Perfect layout alignment: centers the .nav-links */
+  align-items: stretch;
   background-color: #ffffff;
   width: 100%;
   border-top: 1px solid #000000;
@@ -197,8 +199,8 @@ h5{
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
   align-items: stretch;
+  border-left: 1px solid #000000;
 }
 
 .nav ul li {
@@ -225,6 +227,10 @@ h5{
 
 /* --- RIGHT SIDE: Social Links Group --- */
 .nav-socials {
+position: absolute;             /* Detaches it from flex flow */
+  right: 0;                       /* Locks it cleanly to the right side of the screen */
+  top: 0;
+  bottom: 0;
   display: flex;
   align-items: stretch;
 }
@@ -237,10 +243,9 @@ h5{
   font-size: 16px;
   padding: 0 25px;
   text-decoration: none;
-  border-left: 1px solid #000000; /* Adds the same style divider line to the left of each icon */
+  border-left: 1px solid #000000; /* Adds divider line to the left of each icon */
   transition: color 0.2s ease;
 }
-
 .nav-socials a:hover {
   color: #000000;
 }
