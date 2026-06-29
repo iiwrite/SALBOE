@@ -396,8 +396,7 @@ a {
   color: #333333;
 }
 .about-page{
- display: flex;
-  align-items: center;       /* Vertically aligns text and image in the middle */
+  display: flex;
   justify-content: space-between; /* Creates balanced spacing between text and image */
   gap: 50px;                 /* The gap space between the text column and image column */
 }
@@ -410,8 +409,7 @@ a {
 }
 
 .about-image {
-  width: 100%;
-  max-width: 250px;          /* Limits the size of your portrait image */
+  width: 250px;          /* Limits the size of your portrait image */
   height: 250px;              /* Maintains proper aspect ratios */
   border-radius: 8px;        /* Softens the portrait card corners slightly */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft premium drop shadow */
