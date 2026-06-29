@@ -183,8 +183,7 @@ h5{
 /* Navigation Container Box */
 .nav {
   display: flex;
-  justify-content: space-between; /* Pushes links to the left, socials to the right */
-  align-items: stretch;           /* Ensures lines stretch fully from top to bottom */
+  justify-content: center;          /* Ensures lines stretch fully from top to bottom */
   background-color: #ffffff;
   width: 100%;
   border-top: 1px solid #000000;
