@@ -397,9 +397,12 @@ a {
 }
 .about-page{
   display: flex;
+  align-items: center;       /* Vertically aligns text and image in the middle */
   justify-content: space-between; /* Creates balanced spacing between text and image */
   gap: 50px;                 /* The gap space between the text column and image column */
-}
+  max-width: 1000px;         /* Restricts the layout from getting too wide */
+  margin: 140px auto 40px auto; /* Centered block + top margin to clear your fixed header */
+  padding: 0 20px;
 
 .about-image-wrapper {
   flex: 0.2;                 /* CHANGED: Decreased from 1 to 0.7 so it takes up less width than the text */
@@ -410,7 +413,7 @@ a {
 
 .aboutmeimage {
   width: 250px;          /* Limits the size of your portrait image */
-  height: 250px;              /* Maintains proper aspect ratios */
+  height: auto;              /* Maintains proper aspect ratios */
   border-radius: 8px;        /* Softens the portrait card corners slightly */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft premium drop shadow */
 }
