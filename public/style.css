@@ -415,9 +415,8 @@ a {
 
 .about-image {
   width: 100%;
-  max-width: 400px;          /* Limits the size of your portrait image */
+  max-width: 250px;          /* Limits the size of your portrait image */
   height: auto;              /* Maintains proper aspect ratios */
-  object-fit: cover;
   border-radius: 8px;        /* Softens the portrait card corners slightly */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft premium drop shadow */
 }
