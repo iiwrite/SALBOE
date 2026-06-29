@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
 /* General Styles */
 html, body {
   height: 100%;
@@ -9,10 +11,10 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Cinzel', serif;;
   margin: 0;
   padding: 0;
-  background-color: #f0ebd5;
+  background-color: #ffffff;
 }
 
 main {
@@ -25,7 +27,7 @@ main {
   top: 0; /* Keep it visible */
   left: 0;
   width: 100%;
-  background-color:#fae3bd;
+  background-color:hsl(0, 0%, 93%);
   z-index: 1000;
   border-bottom:1px solid black;
   text-align: center;
@@ -45,20 +47,20 @@ main {
   margin: 0;
   font-size: 4em;
   line-height: 1;
-  color: #333;
+  color: #000000;
 }
 
 .header p {
   margin: 5px 0;
   line-height: 2;
-  color: #777;
+  color: #000000;
 }
 
 .footer {
   background-color:#fae3bd;
   padding: 10px 0;
   border-top:1px solid black;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Cinzel', serif;
 }
 
 .footer-content {
@@ -112,7 +114,7 @@ main {
   border: black;
 }
 .post-slider .slider-title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Cinzel', serif;
   text-align: center;
   margin: 30px auto;
   font-size: 2em;
@@ -142,7 +144,7 @@ main {
 }
 
 h5{
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Cinzel', serif;
   color: black;
   margin: 5px;
   text-align: center;
@@ -151,7 +153,7 @@ h5{
 
 .text-date{
   text-align: left;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Cinzel', serif;
   font-size: 0.75em;
 }
 
@@ -220,7 +222,7 @@ main {
   font-style: italic;
   font-size: 38px;
   line-height: 1.5;  /* Improve line spacing for better flow */
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: 'Cinzel', serif;
   color: #333;
   margin-bottom: 20px;
 }
@@ -247,7 +249,7 @@ main {
 .poem-text p {
   margin-bottom: 15px;
   font-style: italic;  /* Makes the text italic */
-  font-family: 'Georgia', 'Times New Roman', serif;  /* Choose a classic serif font for poetry */
+  font-family: 'Cinzel', serif; /* Choose a classic serif font for poetry */
   font-size: 18px;  /* Slightly larger font for readability */
   line-height: 1.5;  /* Improve line spacing for better flow */
   color: black;  /* A subtle, poetic color like indigo */
@@ -260,7 +262,7 @@ main {
 
    margin-bottom: 15px;
  /* Makes the text italic */
-  font-family: 'Georgia', 'Times New Roman', serif;  /* Choose a classic serif font for poetry */
+  font-family: 'Cinzel', serif; /* Choose a classic serif font for poetry */
   font-size: 18px;  /* Slightly larger font for readability */
   line-height: 1.5;  /* Improve line spacing for better flow */
   color: black;  /* A subtle, poetic color like indigo */
@@ -310,11 +312,11 @@ main {
   padding: 10px;
   font-size: 1.2em;              /* Adjust font size */
   color: #333;                   /* Dark text color */
-  font-family: 'Georgia', serif; /* Use a serif font for elegance */
+  font-family: 'Cinzel', serif;/* Use a serif font for elegance */
 }
 
 .about-container{
-  font-family: 'Georgia', 'Times New Roman', serif;  /* Choose a classic serif font for poetry */
+  font-family: 'Cinzel', serif; /* Choose a classic serif font for poetry */
   font-size: 18px;  /* Slightly larger font for readability */
   line-height: 1.5;  /* Improve line spacing for better flow */
   color: #333;  /* A subtle, poetic color like i */
@@ -362,7 +364,7 @@ a {
 .contact-form h3 {
   text-align: center;
   font-size: 24px;
-  font-family: 'Georgia', serif;
+  font-family: 'Cinzel', serif;
   margin-bottom: 20px;
 }
 
@@ -373,7 +375,7 @@ a {
   margin: 8px 0;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-family: 'Georgia', serif;
+  font-family: 'Cinzel', serif;
   font-size: 16px;
 }
 
