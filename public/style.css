@@ -300,8 +300,9 @@ main {
   font-size: 20px;  /* Slightly larger font for readability */
   line-height: 1.5;  /* Improve line spacing for better flow */
   color: black;  /* A subtle, poetic color like indigo */
-  text-align: center;  
+  text-align: Justify;  
   padding: 20px;  /* Add some padding around each paragraph */
+  padding-left: 50px;
   white-space: pre-line;
 }
 
@@ -314,10 +315,10 @@ main {
   line-height: 1.5;  /* Improve line spacing for better flow */
   color: black;  /* A subtle, poetic color like indigo */
   padding: 20px;  /* Add some padding around each paragraph */
-  padding-right: 10cm;  /* Add some padding around each paragraph */
+  padding-left: 50px;  /* Add some padding around each paragraph */
   max-width: 800px; /* Adjust width as needed */
   margin: 0 auto; /* Centers the content */
-  text-align: center; /* Justifies the text */
+  text-align: Justify; /* Justifies the text */
 
 }
 
