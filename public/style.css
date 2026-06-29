@@ -291,9 +291,7 @@ main {
   color: #555; /* Adjust the color as needed */
 }
 .poem-page {
-  text-align: Justify; 
-    padding: 20px;
-    margin-left: 50px;
+    margin-left: 100px;
 }
 
 /* Apply a cursive or elegant serif font for a poetic feel */
