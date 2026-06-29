@@ -290,8 +290,11 @@ main {
 
 /* Style for each individual poetry item */
 .poetry-item {
-  background-color: #f9f8f3;     /* Light background for each item */
+  background-color: #ffffff;     /* Light background for each item */
   border-radius: 8px;            /* Rounded corners */
+  display: flex;
+    flex-direction: column; /* Stacks image and text vertically */
+    align-items: center;
   overflow: hidden;              /* Ensures the image and text don't overflow */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
   transition: transform 0.3s ease; /* Smooth transform effect */
