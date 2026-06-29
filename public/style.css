@@ -395,11 +395,22 @@ a {
   margin-bottom: 15px;
   color: #333333;
 }
+.about-page{
+  display: flex;
+  justify-content: space-between; /* Creates balanced spacing between text and image */
+  gap: 50px;                 /* The gap space between the text column and image column */
+}
+
+.about-image-wrapper {
+  flex: 0.2;                 /* CHANGED: Decreased from 1 to 0.7 so it takes up less width than the text */
+  display: flex;
+  justify-content: center;   
+  align-items: center;
+}
 
 .aboutmeimage {
- 
+  width: 250px;          /* Limits the size of your portrait image */
   height: 250px;              /* Maintains proper aspect ratios */
-   width: auto; 
   border-radius: 8px;        /* Softens the portrait card corners slightly */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft premium drop shadow */
 }
