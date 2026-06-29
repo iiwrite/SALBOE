@@ -47,7 +47,8 @@ main {
   margin: 0;
   font-size: 4em;
   line-height: 1;
-  padding: 40 px;
+  padding: 10 px;
+  padding-bottom: 50px;
   color: #000000;
 }
 
