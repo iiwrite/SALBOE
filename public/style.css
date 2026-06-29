@@ -181,30 +181,35 @@ h5{
 
 
 /* Navigation */
-.nav{
+.nav {
   display: flex;
   justify-content: center;
   background-color: #ffffff;
-   width: 100%;
+  width: 100%;
+  
+  /* These rules create the continuous top and bottom border box */
   border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
-  min-height: 30px; 
+  min-height: 40px; 
 }
 
 .nav ul {
   list-style-type: none;
   padding: 0;
-  margin: 10px 0;
+  margin: 0;                /* CHANGED: Removed top/bottom margins to make the box clean */
   display: flex;
   justify-content: center;
+  align-items: stretch;     /* NEW: Stretches list items vertically so vertical lines reach from top to bottom */
 }
 
 .nav ul li {
-  display: flex;          /* FIXED: Changed from inline to flex for reliable alignment */
+  display: flex;          
   align-items: center;
-  padding: 0 20px;
+  /* CHANGED: Removed horizontal padding here so it doesn't mess up the borders */
+  padding: 0;               
 }
 
+/* Adds the separator lines between links, but omits the last one (About) */
 .nav ul li:not(:last-child) {
   border-right: 1px solid #000000;
 }
@@ -213,12 +218,18 @@ h5{
   text-decoration: none;
   color: #555;
   font-weight: bold;
+  /* NEW: Put the padding directly on the anchor tag. 
+     This creates the space between the text and the line, and makes the whole area clickable. */
+  padding: 12px 30px; 
+  display: block;
 }
 
 .nav ul li a.active,
 .nav ul li a:hover {
   color: #000;
-  border-bottom: 2px solid #000;
+  /* CHANGED: Using text-decoration instead of border-bottom so it doesn't break the container's layout */
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 /* Main Content */
