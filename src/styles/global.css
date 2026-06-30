@@ -512,7 +512,10 @@ a {
    ========================================= */
 
 @media screen and (max-width: 768px) {
-  
+  .nav ul, 
+  .nav-socials {
+    display: none !important; /* Force hide */
+  }
   /* 1. Shrink the huge header text */
   .header h1,
   .header .site-name {
