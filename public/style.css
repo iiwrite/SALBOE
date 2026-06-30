@@ -505,57 +505,74 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
-/* Mobile Styles */
+/* =========================================
+   Mobile Responsiveness
+   ========================================= */
+
 @media screen and (max-width: 768px) {
   
-  /* Show the hamburger icon */
-  .hamburger {
-    display: block;
-    width: 100%; 
-    background-color: #ffffff;
+  /* 1. Shrink the huge header text */
+  .header h1 {
+    font-size: 2.2em; /* Much smaller for mobile */
+    padding-bottom: 5px;
   }
 
-  /* Restructure the nav container for vertical stacking */
+  .header p {
+    font-size: 0.9em;
+  }
+
+  /* 2. Configure the Nav container */
   .nav {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch; /* Allows children to span full width */
+    min-height: auto;
   }
 
-  /* Hide the nav links and socials by default on mobile */
+  /* 3. Align the hamburger to the right */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 45px;
+    align-self: flex-end; /* Pushes the icon to the far right */
+    margin-right: 15px; /* Slight breathing room from the edge */
+    cursor: pointer;
+  }
+
+  /* 4. Hide the menu items by default */
   .nav ul, 
   .nav-socials {
-    display: none; /* Hidden until toggled */
+    display: none; 
     flex-direction: column;
     width: 100%;
-    border-left: none; /* Remove desktop borders */
+    border-left: none; 
   }
 
-  /* When the 'active' class is added via JS, show the links */
-  .nav.active ul,
-  .nav.active .nav-socials {
+  /* 5. THIS IS THE MAGIC: Show the menu when '.active' is added via JavaScript */
+  .nav.active ul {
     display: flex;
   }
+  
+  .nav.active .nav-socials {
+    display: flex;
+    flex-direction: row; /* Keep socials side-by-side */
+    justify-content: center;
+    padding: 15px 0;
+  }
 
-  /* Style the vertical links */
+  /* Fix the individual link styles */
   .nav ul li {
     border-right: none;
-    border-bottom: 1px solid #000000;
+    border-top: 1px solid #e0e0e0;
     width: 100%;
-    justify-content: center;
   }
   
   .nav ul li a {
     text-align: center;
     width: 100%;
-  }
-
-  /* Fix absolute positioning of socials on mobile */
-  .nav-socials {
-    position: relative; 
-    border-bottom: 1px solid #000000;
-    padding: 10px 0;
-    justify-content: center;
-    flex-direction: row; /* Keep social icons horizontal */
+    padding: 15px 0;
   }
 
   .nav-socials a {
@@ -563,14 +580,8 @@ a {
     padding: 0 15px;
   }
   
-  /* Adjust Main spacing so it doesn't get covered by the expanded menu */
+  /* Adjust content spacing so it isn't hidden under the header */
   main, .short, .about-page {
-    margin-top: 180px; 
-  }
-  
-  /* Stack the about page elements vertically on mobile */
-  .about-page {
-    flex-direction: column-reverse; /* Puts image on top of text */
-    text-align: center;
+    margin-top: 150px; 
   }
 }
