@@ -498,12 +498,12 @@ a {
   padding: 12px;
 }
 
-.hamburger span {
+.hamburger-lines span {
   display: block;
   width: 25px;
   height: 3px;
   background-color: #000000;
-  margin: 5px auto;
+  margin: 4px 0; /* Tighter spacing */
   transition: all 0.3s ease-in-out;
 }
 
@@ -535,16 +535,15 @@ a {
   }
 
   /* 3. Align the hamburger to the right */
-  .hamburger {
+.hamburger {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 45px;
-    align-self: flex-end; /* Pushes the icon to the far right */
-    margin-right: 15px; /* Slight breathing room from the edge */
+    flex-direction: row;       /* Puts Text and Lines side-by-side */
+    align-items: center;       /* Centers them vertically */
+    justify-content: flex-end; 
+    align-self: flex-end; 
     cursor: pointer;
+    margin-right: 15px;
+    padding: 10px 0;
   }
 
   /* 4. Hide the menu items by default */
@@ -557,8 +556,19 @@ a {
     border-left: none; 
     border-bottom: 1px solid #e0e0e0;
   }
-  
 
+  .menu-text {
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: #000000;
+  }
+  
+main, .short, .about-page, .poem-page, .poetry-grid {
+    margin-top: 190px !important; /* Increased margin specifically for mobile */
+    padding-top: 20px;
+  }
   /* 5. THIS IS THE MAGIC: Show the menu when '.active' is added via JavaScript */
   .nav.active ul {
     display: flex;
