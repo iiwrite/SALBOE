@@ -5,7 +5,7 @@ export const AUTHOR = 'Subekshya Dani';
 export const AUTHOR_EMAIL = 'subekshya18in@gmail.com';
 
 export const SOCIAL_LINKS = {
-  linkedin: 'https://www.linkedin.com/in/suvekshya-dani-834a8b200/',
+  linkedin: 'https://www.linkedin.com/in/subekshya/',
   instagram: 'https://www.instagram.com/subek.shy.a/',
   email: `mailto:${AUTHOR_EMAIL}`,
 } as const;
@@ -19,4 +19,4 @@ export const NAV_LINKS = [
 ] as const;
 
 export const DEFAULT_DESCRIPTION =
-  'Sprouting Through Resistance is the official literary website of Subekshya Dani featuring original poetry, emotional verse, short stories, and reflective creative writing.';
+  'Sprouting Through Resistance is the official literary website of Subekshya Dani featuring original poetry, personal essays, short stories and creative writing.';
