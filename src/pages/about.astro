@@ -1,0 +1,46 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { buildPersonSchema, buildBreadcrumbSchema } from '@/lib/seo';
+import { DEFAULT_DESCRIPTION } from '@/lib/constants';
+
+const schema = [
+  buildPersonSchema(),
+  buildBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+  ]),
+];
+---
+
+<BaseLayout
+  title="About Subekshya Dani – Author & Creative Writer"
+  description={DEFAULT_DESCRIPTION}
+  path="/about"
+  image="/images/about/me.jpeg"
+  schema={schema}
+  mainClass="about-page"
+>
+  <div class="about-text">
+    <h1 class="about-title"><em>About me</em></h1>
+    <p>This page is personification of my mind and soul. Everything I think, feel, and perceive, I write.</p>
+    <p>
+      Writing, for me, is like stacking the strewed blocks into a castle, gates, towers, and what not.As much as I love
+      writing, I love reading even more. I read to fill myself up and write to empty myself out. This cycle has taught me
+      that literature doesn't belong to the one who writes but to the one who reads. The open interpertaion of pieces
+      that I write are what keeps them alive and I am trying to keep them alive.
+    </p>
+    <p>And I love gardening.</p>
+    <p>Oh and I am an Electrrical Engineer.</p>
+    <p>Almost forgot. My name is Subekshya Dani.</p>
+  </div>
+  <div class="about-image-wrapper">
+    <img
+      class="aboutmeimage"
+      src="/images/about/me.jpeg"
+      alt="Portrait of Subekshya Dani, author of Sprouting Through Resistance"
+      loading="lazy"
+      width="400"
+      height="400"
+    />
+  </div>
+</BaseLayout>

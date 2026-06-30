@@ -1,0 +1,30 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContentGrid from '@/components/sections/ContentGrid.astro';
+import { getCollection } from 'astro:content';
+import { buildBreadcrumbSchema } from '@/lib/seo';
+
+const stories = await getCollection('stories', ({ data }) => !data.draft);
+const items = stories.map((story) => ({
+  href: `/short-stories/${story.slug}`,
+  image: story.data.image,
+  imageAlt: story.data.imageAlt,
+  title: story.data.title,
+}));
+
+const schema = buildBreadcrumbSchema([
+  { name: 'Home', path: '/' },
+  { name: 'Short Stories', path: '/short-stories' },
+]);
+---
+
+<BaseLayout
+  title="Short Stories"
+  description="Read short stories by Subekshya Dani. Explore literary fiction and heartfelt narratives."
+  path="/short-stories"
+  image="/images/stories/1.jpg"
+  schema={schema}
+  mainClass="short"
+>
+  <ContentGrid items={items} />
+</BaseLayout>

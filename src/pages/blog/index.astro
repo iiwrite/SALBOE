@@ -1,0 +1,34 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContentGrid from '@/components/sections/ContentGrid.astro';
+import { getCollection } from 'astro:content';
+import { buildBreadcrumbSchema } from '@/lib/seo';
+
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+const sorted = posts.sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
+);
+
+const items = sorted.map((post) => ({
+  href: `/blog/${post.slug}`,
+  image: post.data.image,
+  imageAlt: post.data.imageAlt,
+  title: post.data.title,
+}));
+
+const schema = buildBreadcrumbSchema([
+  { name: 'Home', path: '/' },
+  { name: 'Blog', path: '/blog' },
+]);
+---
+
+<BaseLayout
+  title="Blog"
+  description="Explore blog posts and essays by Subekshya Dani. Thoughts, reflections, and creative nonfiction."
+  path="/blog"
+  image="/images/blog/identity.jpg"
+  schema={schema}
+  mainClass="short"
+>
+  <ContentGrid items={items} />
+</BaseLayout>

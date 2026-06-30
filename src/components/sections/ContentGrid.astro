@@ -1,0 +1,31 @@
+---
+import ContentCard from '@/components/ui/ContentCard.astro';
+
+interface Item {
+  href: string;
+  image: string;
+  imageAlt: string;
+  title: string;
+}
+
+interface Props {
+  items: Item[];
+  headingLevel?: 'h3' | 'h4';
+}
+
+const { items, headingLevel = 'h3' } = Astro.props;
+---
+
+<div class="poetry-grid">
+  {
+    items.map((item) => (
+      <ContentCard
+        href={item.href}
+        image={item.image}
+        imageAlt={item.imageAlt}
+        title={item.title}
+        headingLevel={headingLevel}
+      />
+    ))
+  }
+</div>

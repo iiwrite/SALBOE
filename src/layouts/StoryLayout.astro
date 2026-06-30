@@ -1,0 +1,48 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PhotoCredit from '@/components/ui/PhotoCredit.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  image: string;
+  imageAlt: string;
+  imageCredit?: string;
+  imageCreditUrl?: string;
+  imageSourceUrl?: string;
+  schema?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const props = Astro.props;
+---
+
+<BaseLayout
+  title={props.title}
+  description={props.description}
+  path={props.path}
+  image={props.image}
+  type="article"
+  schema={props.schema}
+  mainClass="poem-page"
+>
+  <article>
+    <h1 class="poem-title"><em>{props.title}</em></h1>
+    <img
+      class="poem-image"
+      src={props.image}
+      alt={props.imageAlt}
+      loading="eager"
+      width="500"
+      height="333"
+    />
+    <PhotoCredit
+      credit={props.imageCredit}
+      creditUrl={props.imageCreditUrl}
+      sourceUrl={props.imageSourceUrl}
+    />
+    <div class="story">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

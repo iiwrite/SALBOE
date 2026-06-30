@@ -1,0 +1,33 @@
+---
+interface Props {
+  credit?: string;
+  creditUrl?: string;
+  sourceUrl?: string;
+}
+
+const { credit, creditUrl, sourceUrl } = Astro.props;
+---
+
+{
+  credit && (
+    <p class="photo-credit">
+      Photo by{' '}
+      {creditUrl ? (
+        <a href={creditUrl} target="_blank" rel="noopener noreferrer">
+          {credit}
+        </a>
+      ) : (
+        credit
+      )}
+      {sourceUrl && (
+        <>
+          {' '}
+          on{' '}
+          <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
+            Source
+          </a>
+        </>
+      )}
+    </p>
+  )
+}

@@ -1,18 +1,16 @@
 {
-  "name": "my-website",
-  "version": "1.0.0",
-  "main": "script.js",
+  "name": "sprouting-through-resistance",
+  "version": "2.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.3",
-    "express": "^4.21.2",
-    "mongoose": "^8.10.1"
-  },
-  "description": ""
+    "@astrojs/sitemap": "^3.3.1",
+    "@astrojs/vercel": "^8.1.4",
+    "astro": "^5.7.10",
+    "zod": "^3.24.2"
+  }
 }

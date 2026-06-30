@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content';
+import StoryLayout from '@/layouts/StoryLayout.astro';
+import {
+  buildCreativeWorkSchema,
+  buildBreadcrumbSchema,
+} from '@/lib/seo';
+
+export async function getStaticPaths() {
+  const stories = await getCollection('stories', ({ data }) => !data.draft);
+  return stories.map((story) => ({
+    params: { slug: story.slug },
+    props: { story },
+  }));
+}
+
+const { story } = Astro.props;
+const { Content } = await story.render();
+const path = `/short-stories/${story.slug}`;
+
+const schema = [
+  buildCreativeWorkSchema({
+    title: story.data.title,
+    description: story.data.description,
+    path,
+    image: story.data.image,
+  }),
+  buildBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Short Stories', path: '/short-stories' },
+    { name: story.data.title, path },
+  ]),
+];
+---
+
+<StoryLayout
+  title={story.data.title}
+  description={story.data.description}
+  path={path}
+  image={story.data.image}
+  imageAlt={story.data.imageAlt}
+  imageCredit={story.data.imageCredit}
+  imageCreditUrl={story.data.imageCreditUrl}
+  imageSourceUrl={story.data.imageSourceUrl}
+  schema={schema}
+>
+  <Content />
+</StoryLayout>

@@ -1,0 +1,36 @@
+---
+import type { RecentPost } from '@/lib/recent-posts';
+
+interface Props {
+  posts: RecentPost[];
+}
+
+const { posts } = Astro.props;
+---
+
+<div class="page-wrapper">
+  <div class="post-slider">
+    <h2 class="slider-title">Recent Posts</h2>
+    <div class="carousel-scroll" tabindex="0" aria-label="Recent posts carousel">
+      {
+        posts.map((post) => (
+          <article class="post">
+            <a href={post.href}>
+              <img
+                class="slider-image"
+                src={post.image}
+                alt={post.imageAlt}
+                loading="lazy"
+                width="300"
+                height="250"
+              />
+              <div class="post-info">
+                <h3>{post.title}</h3>
+              </div>
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</div>

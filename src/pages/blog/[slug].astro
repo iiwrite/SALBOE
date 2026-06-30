@@ -1,0 +1,51 @@
+---
+import { getCollection } from 'astro:content';
+import BlogPostLayout from '@/layouts/BlogPostLayout.astro';
+import {
+  buildArticleSchema,
+  buildBreadcrumbSchema,
+} from '@/lib/seo';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const path = `/blog/${post.slug}`;
+
+const schema = [
+  buildArticleSchema({
+    title: post.data.title,
+    description: post.data.description,
+    path,
+    image: post.data.image,
+    pubDate: post.data.pubDate,
+    tags: post.data.tags,
+  }),
+  buildBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Blog', path: '/blog' },
+    { name: post.data.title, path },
+  ]),
+];
+---
+
+<BlogPostLayout
+  title={post.data.title}
+  description={post.data.description}
+  path={path}
+  image={post.data.image}
+  imageAlt={post.data.imageAlt}
+  imageCredit={post.data.imageCredit}
+  imageCreditUrl={post.data.imageCreditUrl}
+  imageSourceUrl={post.data.imageSourceUrl}
+  pubDate={post.data.pubDate}
+  schema={schema}
+>
+  <Content />
+</BlogPostLayout>

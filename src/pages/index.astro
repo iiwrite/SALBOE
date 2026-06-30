@@ -1,0 +1,12 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PostSlider from '@/components/sections/PostSlider.astro';
+import { getRecentPosts } from '@/lib/recent-posts';
+import { DEFAULT_DESCRIPTION } from '@/lib/constants';
+
+const posts = await getRecentPosts(4);
+---
+
+<BaseLayout path="/" description={DEFAULT_DESCRIPTION}>
+  <PostSlider posts={posts} />
+</BaseLayout>

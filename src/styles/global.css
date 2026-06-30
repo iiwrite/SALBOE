@@ -1,0 +1,691 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* General Styles */
+html, body {
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'EB Garamond', serif;;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+main {
+  flex: 1;
+}
+
+/* Fixed Header */
+.header {
+  position: fixed;
+  top: 0; /* Keep it visible */
+  left: 0;
+  width: 100%;
+  background-color:hsl(0, 0%, 93%);
+  z-index: 1000;
+  text-align: center;
+  padding: 15px;
+  box-shadow:  black;
+   transition: transform 0.4s ease;
+}
+
+/* Hidden state */
+.header.hidden {
+  transform: translateY(-100%);
+}
+
+
+
+.header h1,
+.header .site-name {
+  margin: 0;
+  font-size: 4em;
+  line-height: 1;
+  padding: 10px;
+  padding-bottom: 15px;
+  color: #000000;
+  font-family: 'Cinzel', serif;
+}
+
+.header p {
+  margin: 5px 0;
+  line-height: 2;
+  color: #000000;
+  font-family: 'Cinzel', serif;
+}
+
+.footer {
+  background-color:#ffffff;
+  padding: 10px 0;
+  border-top:1px solid black;
+  font-family: 'EB Garamond', serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Social icons */
+.social-links a {
+   color: #000000;
+  font-size: 22px;
+  margin: 0 12px;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff4d6d; /* accent color */
+  transform: translateY(-3px);
+}
+
+/* Copyright text */
+.Copyright p {
+  font-size: 14px;
+  color: #000000;
+  margin: 0;
+  text-align: center;
+}
+
+.social-links a:hover {
+  color: #ff4d6d;
+  transform: translateY(-2px);
+} 
+.page-wrapper a:hover{
+  color: pink;
+
+}
+/*Post Slider */
+.post-slider{
+  position: relative;
+}
+
+.post-slider .post-wrapper{
+  width: 80%;
+  height: 350px;
+  margin: 0px auto;
+  overflow: hidden;
+  padding: 10px 0px 10px 0px;
+  border: black;
+}
+.post-slider .slider-title {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  margin: 30px auto;
+  font-size: 2em;
+
+}
+
+.post-slider .post-wrapper .post{
+  width: 300px;
+  height: 350x;
+  margin: 0 10px;
+  display: inline-block;
+  background:white;
+  border-radius: 5px;
+  box-shadow: 1rem 1rem 1ram -1rem #a0a0a033;
+}
+
+.post-slider .post-wrapper .post .post-info{
+  height: 100px;
+  padding: 0px 5px;
+}
+
+.post-slider .post-wrapper .post .slider-image{
+  width: 100%;
+  height: 250px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+h5{
+  font-family: 'EB Garamond', serif;
+  color: black;
+  margin: 5px;
+  text-align: center;
+
+}
+
+.text-date{
+  text-align: left;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.75em;
+}
+
+.post-slider .next{
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  font-size: 2em;
+  color: black;
+  cursor: pointer;
+}
+
+.post-slider .prev{
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  font-size: 2em;
+  color: black;
+  cursor: pointer;
+}
+
+
+/* Navigation Container Box */
+.nav {
+position: relative;             /* CRITICAL: Allows absolute positioning inside it */
+  display: flex;
+  justify-content: center;        /* Perfect layout alignment: centers the .nav-links */
+  align-items: stretch;
+  background-color: #ffffff;
+  width: 100%;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  min-height: 45px; 
+}
+
+/* --- LEFT SIDE: Navigation Links Group --- */
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: stretch;
+  border-left: 1px solid #000000;
+}
+
+.nav ul li {
+  display: flex;          
+  align-items: center;
+  padding: 0;               
+  border-right: 1px solid #000000; /* Adds divider line to every link */
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  padding: 12px 25px; 
+  display: block;
+}
+
+.nav ul li a.active,
+.nav ul li a:hover {
+  color: #000;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* --- RIGHT SIDE: Social Links Group --- */
+.nav-socials {
+position: absolute;             /* Detaches it from flex flow */
+  right: 0;                       /* Locks it cleanly to the right side of the screen */
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: stretch;
+}
+
+.nav-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 16px;
+  padding: 0 25px;
+  text-decoration: none;
+  border-left: 1px solid #000000; /* Adds divider line to the left of each icon */
+  transition: color 0.2s ease;
+}
+.nav-socials a:hover {
+  color: #000000;
+}
+
+/* Main Content */
+main {
+  padding: 40px 20px;
+  margin-top: 140px; /* Increased margin to prevent header overlap */
+  text-align: center;
+}
+
+.short{
+  padding: 40px 20px;
+  margin-top: 140px; /* Increased margin to prevent header overlap */
+  text-align: center;
+
+}
+
+/* Poem Title */
+.poem-title {
+  font-style: italic;
+  font-size: 38px;
+  line-height: 1.5;  /* Improve line spacing for better flow */
+  font-family: 'EB Garamond', serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Poem Image */
+.poem-image {
+  width: 60%;
+  max-width: 500px;
+  height: 20;
+  display: block;
+  margin: 20px auto;
+}
+
+.photo-credit {
+  font-size: 0.5rem;
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #555; /* Adjust the color as needed */
+}
+.poem-page {
+   
+}
+
+/* Apply a cursive or elegant serif font for a poetic feel */
+.poem-text p {
+  margin-bottom: 15px;
+   margin-left: 500px;
+  font-style: italic;  /* Makes the text italic */
+  font-family: 'EB Garamond', serif; /* Choose a classic serif font for poetry */
+  font-size: 20px;  /* Slightly larger font for readability */
+  line-height: 1.5;  /* Improve line spacing for better flow */
+  color: black;  /* A subtle, poetic color like indigo */
+  text-align: Justify;  
+  padding: 20px;  /* Add some padding around each paragraph */
+  padding-left: 50px;
+  white-space: pre-line;
+}
+
+/* Style for the entire poetry collection */
+.poetry-grid {
+  display: grid;                 /* Enable grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Create responsive columns */
+  gap: 40px;                     /* Space between grid items */
+  padding: 40px;                 /* Space around the grid */
+}
+.front-image{
+  width: 100%;
+  max-width: 500px;
+  height: 250px;
+}
+
+.story{
+
+   margin-bottom: 15px;
+ /* Makes the text italic */
+  font-family: 'EB Garamond', serif; /* Choose a classic serif font for poetry */
+  font-size: 20px;  /* Slightly larger font for readability */
+  line-height: 1.5;  /* Improve line spacing for better flow */
+  color: black;  /* A subtle, poetic color like indigo */
+  padding: 20px;  /* Add some padding around each paragraph */
+  padding-left: 50px;  /* Add some padding around each paragraph */
+  max-width: 800px; /* Adjust width as needed */
+  margin: 0 auto; /* Centers the content */
+  text-align: Justify; /* Justifies the text */
+
+}
+
+/* Style for each individual poetry item */
+.poetry-item {
+  background-color: #ffffff;     /* Light background for each item */
+  border-radius: 8px;            /* Rounded corners */
+  overflow: hidden;              /* Ensures the image and text don't overflow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  transition: transform 0.3s ease; /* Smooth transform effect */
+}
+
+.poetry-item:hover {
+  transform: scale(1.05);         /* Slight zoom on hover */
+}
+
+/* Ensure images are responsive and fit within the grid item */
+.poem-image {
+  width: 100%;                   /* Make image fill its container */
+  height: auto;                  /* Maintain aspect ratio */
+  border-bottom: 2px solid #000000; /* Optional: add a border under the image */
+}
+
+/* Style for the title of each poetry item */
+.poetry-item h3 {
+  text-align: center;            /* Center align the text */
+  padding: 10px;
+  font-size: 1.2em;              /* Adjust font size */
+  color: #333;                   /* Dark text color */
+  font-family: 'EB Garamond', serif;/* Use a serif font for elegance */
+}
+
+
+a {
+  text-decoration: none;         /* Remove underline from links */
+  color: inherit;                /* Inherit text color */
+}
+
+
+/*about me */
+.about-text {
+  flex: 1;                   /* Allows the text column to expand and fill available space flexibly */
+  text-align: justify;       
+}
+
+.about-text h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.about-text p {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333333;
+}
+.about-page{
+  display: flex;
+  align-items: center;       /* Vertically aligns text and image in the middle */
+  justify-content: space-between; /* Creates balanced spacing between text and image */
+  gap: 50px;                 /* The gap space between the text column and image column */
+  max-width: 1000px;         /* Restricts the layout from getting too wide */
+  margin: 140px auto 40px auto; /* Centered block + top margin to clear your fixed header */
+  padding: 0 20px;
+}
+
+.about-image-wrapper {
+ flex: 1;                   /* Gives the image area equal horizontal weight as the text */
+  display: flex;
+  justify-content: center;   /* Centers the image within its half of the screen */
+}
+
+.aboutmeimage {
+  width: 100%;
+  max-width: 400px;          /* Limits the size of your portrait image */
+  height: auto;              /* Maintains proper aspect ratios */
+  object-fit: cover;
+  border-radius: 8px;        /* Softens the portrait card corners slightly */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft premium drop shadow */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    margin-top: 160px;
+  }
+
+  .poem-title {
+    font-size: 28px;
+  }
+
+  .poem-image {
+    width: 90%;
+  }
+
+  .poem-text {
+    font-size: 16px;
+  }
+}
+
+/* Contact Form */
+.contact-form {
+  background-color: #f9f8f3;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form h3 {
+  text-align: center;
+  font-size: 24px;
+  font-family: 'EB Garamond', serif;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
+.hamburger {
+  display: none;
+  /* ... rest of styles */
+}
+/* =========================================
+   Mobile Responsiveness (Hamburger Menu)
+   ========================================= */
+
+/* Hide the hamburger icon on desktop */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 12px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #000000;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+/* =========================================
+   Mobile Responsiveness
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+  
+  /* 1. Shrink the huge header text */
+  .header h1,
+  .header .site-name {
+    font-size: 2.2em; /* Much smaller for mobile */
+    padding-bottom: 5px;
+  }
+
+  .header p {
+    font-size: 0.9em;
+  }
+
+  /* 2. Configure the Nav container */
+  .nav {
+    flex-direction: column;
+    align-items: stretch; /* Allows children to span full width */
+    min-height: auto;
+  }
+
+  /* 3. Align the hamburger to the right */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 45px;
+    align-self: flex-end; /* Pushes the icon to the far right */
+    margin-right: 15px; /* Slight breathing room from the edge */
+    cursor: pointer;
+  }
+
+  /* 4. Hide the menu items by default */
+  .nav ul, 
+.nav-socials {
+    position: static; /* CRITICAL: Removes the absolute positioning */
+    height: auto;     /* Overrides the top/bottom 0 from desktop */
+    width: 100%;
+    display: none; 
+    border-left: none; 
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+
+  /* 5. THIS IS THE MAGIC: Show the menu when '.active' is added via JavaScript */
+  .nav.active ul {
+    display: flex;
+  }
+.nav.active .nav-socials {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+  }
+  /* Fix the individual link styles */
+  .nav ul li {
+    border-right: none;
+    border-top: 1px solid #e0e0e0;
+    width: 100%;
+  }
+  
+  .nav ul li a {
+    text-align: center;
+    width: 100%;
+    padding: 15px 0;
+  }
+.nav-socials a {
+    border-left: none;
+    padding: 10px 20px;
+    display: inline-flex; /* Keeps the click target wrapped tightly around the icon */
+  }
+  
+  /* Adjust content spacing so it isn't hidden under the header */
+  main, .short, .about-page {
+    margin-top: 150px; 
+  }
+
+  .poem-text p,
+  .story p {
+    margin-left: 0;
+    padding-left: 20px;
+  }
+}
+
+/* Blog title */
+.blog-title {
+  font-style: italic;
+  font-size: 38px;
+  line-height: 1.5;
+  font-family: 'EB Garamond', serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+/* CSS scroll-snap carousel (replaces jQuery Slick) */
+.carousel-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 0 20px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-scroll .post {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 1rem 1rem 1rem -1rem #a0a0a033;
+  overflow: hidden;
+}
+
+.carousel-scroll .post a {
+  display: block;
+}
+
+.carousel-scroll .slider-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.carousel-scroll .post-info {
+  padding: 10px 5px;
+  min-height: 60px;
+}
+
+.carousel-scroll .post-info h3 {
+  font-family: 'EB Garamond', serif;
+  color: black;
+  margin: 5px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.story p,
+.story em {
+  display: block;
+  margin-bottom: 15px;
+  font-family: 'EB Garamond', serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: black;
+  text-align: justify;
+}
+
+.story em {
+  font-style: italic;
+}
+
+.poetry-item h4 {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2em;
+  color: #333;
+  font-family: 'EB Garamond', serif;
+  margin: 0;
+}
+
+.front-image {
+  object-fit: cover;
+}

@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content';
+import PoemLayout from '@/layouts/PoemLayout.astro';
+import {
+  buildCreativeWorkSchema,
+  buildBreadcrumbSchema,
+} from '@/lib/seo';
+
+export async function getStaticPaths() {
+  const poems = await getCollection('poetry', ({ data }) => !data.draft);
+  return poems.map((poem) => ({
+    params: { slug: poem.slug },
+    props: { poem },
+  }));
+}
+
+const { poem } = Astro.props;
+const { Content } = await poem.render();
+const path = `/poetry/${poem.slug}`;
+
+const schema = [
+  buildCreativeWorkSchema({
+    title: poem.data.title,
+    description: poem.data.description,
+    path,
+    image: poem.data.image,
+  }),
+  buildBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Poetry', path: '/poetry' },
+    { name: poem.data.title, path },
+  ]),
+];
+---
+
+<PoemLayout
+  title={poem.data.title}
+  description={poem.data.description}
+  path={path}
+  image={poem.data.image}
+  imageAlt={poem.data.imageAlt}
+  imageCredit={poem.data.imageCredit}
+  imageCreditUrl={poem.data.imageCreditUrl}
+  imageSourceUrl={poem.data.imageSourceUrl}
+  schema={schema}
+>
+  <Content />
+</PoemLayout>

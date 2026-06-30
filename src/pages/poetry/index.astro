@@ -1,0 +1,29 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContentGrid from '@/components/sections/ContentGrid.astro';
+import { getCollection } from 'astro:content';
+import { buildBreadcrumbSchema } from '@/lib/seo';
+
+const poems = await getCollection('poetry', ({ data }) => !data.draft);
+const items = poems.map((poem) => ({
+  href: `/poetry/${poem.slug}`,
+  image: poem.data.image,
+  imageAlt: poem.data.imageAlt,
+  title: poem.data.title,
+}));
+
+const schema = buildBreadcrumbSchema([
+  { name: 'Home', path: '/' },
+  { name: 'Poetry', path: '/poetry' },
+]);
+---
+
+<BaseLayout
+  title="Poetry Collection"
+  description="Browse the poetry collection by Subekshya Dani. Original poems including Longed Peace, Alfred and Spike, Blinded by Blood, Reds and Blues, Escaping, and Cycle."
+  path="/poetry"
+  image="/images/poetry/1.jpg"
+  schema={schema}
+>
+  <ContentGrid items={items} headingLevel="h4" />
+</BaseLayout>
