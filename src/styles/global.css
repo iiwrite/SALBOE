@@ -310,18 +310,25 @@ main {
 }
 
 /* Apply a cursive or elegant serif font for a poetic feel */
+.poem-text {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
 .poem-text p {
   margin-bottom: 15px;
   margin-left: 0;
   font-style: italic;  /* Makes the text italic */
   font-family: 'EB Garamond', serif; /* Choose a classic serif font for poetry */
-  font-size: 20px;  /* Slightly larger font for readability */
-  line-height: 1.5;  /* Improve line spacing for better flow */
+  font-size: 18px;  /* Slightly smaller font for better width fit */
+  line-height: 1.8;  /* Improve line spacing for better flow */
   color: black;  /* A subtle, poetic color like indigo */
-  text-align: justify;  
+  text-align: justify;
   padding: 20px;  /* Add some padding around each paragraph */
   padding-left: 20px;
-  white-space: pre-line;
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 /* Style for the entire poetry collection */
@@ -500,19 +507,36 @@ a {
   .hamburger {
     display: none;
     cursor: pointer;
-    padding: 12px;
+    padding: 10px;
     border: none;
     background: transparent;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
   }
 
-  .hamburger span {
+  .hamburger .hamburger-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .hamburger .hamburger-lines span {
     display: block;
     width: 24px;
     height: 3px;
     background-color: #000;
-    margin: 4px 0;
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .hamburger .menu-text {
+    font-family: 'EB Garamond', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
   }
 
 @media screen and (max-width: 768px) {
@@ -559,6 +583,7 @@ a {
     padding: 0;
     border-top: 1px solid #000;
     border-bottom: none;
+    gap: 8px;
   }
 
   .nav ul,
