@@ -543,25 +543,27 @@ a {
 
   /* 4. Hide the menu items by default */
   .nav ul, 
-  .nav-socials {
-    display: none; 
-    flex-direction: column;
+.nav-socials {
+    position: static; /* CRITICAL: Removes the absolute positioning */
+    height: auto;     /* Overrides the top/bottom 0 from desktop */
     width: 100%;
+    display: none; 
     border-left: none; 
+    border-bottom: 1px solid #e0e0e0;
   }
+  
 
   /* 5. THIS IS THE MAGIC: Show the menu when '.active' is added via JavaScript */
   .nav.active ul {
     display: flex;
   }
-  
-  .nav.active .nav-socials {
+.nav.active .nav-socials {
     display: flex;
-    flex-direction: row; /* Keep socials side-by-side */
+    flex-direction: row; 
     justify-content: center;
-    padding: 15px 0;
+    align-items: center;
+    padding: 20px 0;
   }
-
   /* Fix the individual link styles */
   .nav ul li {
     border-right: none;
@@ -574,10 +576,10 @@ a {
     width: 100%;
     padding: 15px 0;
   }
-
-  .nav-socials a {
+.nav-socials a {
     border-left: none;
-    padding: 0 15px;
+    padding: 10px 20px;
+    display: inline-flex; /* Keeps the click target wrapped tightly around the icon */
   }
   
   /* Adjust content spacing so it isn't hidden under the header */
