@@ -1,6 +1,6 @@
 ---
 title: "Stop letting the internet define you"
-description: "Read 'Stop letting the internet define you' – an article by Subekshya Dani about the internet, influence, personality, following, and trends."
+description: "Read 'Stop letting the internet define you' – an article by Subekshya Dani about the internet, influence, personality, Bandwagoner, following, and trends."
 pubDate: 2026-02-01
 image: "/images/blog/identity.jpg"
 imageAlt: "Question mark representing identity"
